@@ -3,13 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ccna 200-120's documentation!
-========================================
-
-Contents:
+Welcome to ccna 200-120 Certification Guide
+===========================================
+Exam Description: The 200-120 composite CCNA v2 exam is a 1-1⁄2 hour test with 50–60 questions. The
+200-120 CCNA exam is the composite exam associated with the CCNA Routing and Switching
+certification. Candidates can prepare for this exam by taking the Interconnecting Cisco Networking
+Devices: Accelerated (CCNAX) version 2.0 course. This exam tests a candidate's knowledge and skills
+required to install, operate, and troubleshoot a small to medium-size enterprise branch network. The
+topics include all the areas covered under the 200-120 CCNA exam.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
 
 
