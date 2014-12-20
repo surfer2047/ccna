@@ -1,5 +1,0 @@
-OSPF
-=====
-Ospf is the shortest path routing protocol
-it use the bandwidht as the metric to find out the best path to its neighbour router
-

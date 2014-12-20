@@ -1,6 +1,5 @@
 Converged Networks
 =====================
-
 If The network can transmit all types of data (Voice, video and other multimedia data) using single/common network then
 these types of network is referred as converged Networks.
 
