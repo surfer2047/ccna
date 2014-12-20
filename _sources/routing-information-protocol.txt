@@ -1,0 +1,5 @@
+RIP (Routing Information Protocols)
+===================================
+Routing information protcols is the distance vector protocol, means it sends the complete routing tables every 30 sec
+out of active interface to its neighbour routers.
+

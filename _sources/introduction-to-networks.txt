@@ -1,0 +1,33 @@
+What is Computer Network
+=========================
+Computer Network is also referred as Data network is a telecommunications networks that allows Networking
+Devices (Computer, Routers, Switches, Bridge, hub) to exchange data. Computers and routers are sometimes referred as a
+**node**.
+
+Types of Networks
+------------------
+The two most common types of network infrastructures are:
+
+* `Local Area Network (LAN)`_
+
+* `Wide Area Network (WAN)`_
+
+* Metropolitan Area Network (MAN) 
+
+* Wireless LAN (WLAN) 
+
+* Storage Area Network (SAN)
+
+
+Local Area Network (LAN)
+*****************************
+.. image:: _static/module1/lan.png
+
+wide Area Network (WAN)
+************************
+.. image:: _static/module1/wan.png
+
+Metropolitan Area Network
+*****************************
+The network which Connect the Large City Area is referred as MAN
+

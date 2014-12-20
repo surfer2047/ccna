@@ -1,7 +1,4 @@
-.. ccna 200-120 documentation master file, created by
-   sphinx-quickstart on Thu Dec 18 22:25:17 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. contents::
 
 Welcome to ccna 200-120 Certification Guide
 ===========================================
@@ -14,13 +11,12 @@ topics include all the areas covered under the 200-120 CCNA exam.
 
 .. toctree::
    :maxdepth: 1
-
-
+   
+   introduction-to-networks
+   converged-networks
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 

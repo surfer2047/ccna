@@ -1,0 +1,15 @@
+Converged Networks
+=====================
+
+If The network can transmit all types of data (Voice, video and other multimedia data) using single/common network then
+these types of network is referred as converged Networks.
+
+Non Converged Networks
+----------------------
+Early age Networks are non converged networks as shown below
+
+.. image:: _static/module1/non-converged-networks.png
+
+Converged Networks
+--------------------
+.. image:: _static/module1/converging-networks.png
