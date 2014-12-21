@@ -1,0 +1,7 @@
+IP routing and Addressing
+=================================
+
+Routing protocols
+------------------
+Protocols which are used to dynamically find out the best route to the destination networks. The Best route to the
+destination networks are stored into the **routing table**

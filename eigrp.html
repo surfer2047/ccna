@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>EIGRP: Enhanced Interiror Gateway Routing Protocol &mdash; ccna 200-120 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ccna 200-120 0.1 documentation" href="index.html" />
+    <link rel="next" title="Converged Networks" href="converged-networks.html" />
+    <link rel="prev" title="What is Computer Network" href="introduction-to-networks.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="converged-networks.html" title="Converged Networks"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="introduction-to-networks.html" title="What is Computer Network"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ccna 200-120 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">EIGRP: Enhanced Interiror Gateway Routing Protocol</a><ul>
+<li><a class="reference internal" href="#neighbors-discover">Neighbors Discover</a></li>
+<li><a class="reference internal" href="#topology-exchange">Topology Exchange</a></li>
+<li><a class="reference internal" href="#choosing-the-best-route">Choosing the Best route</a></li>
+<li><a class="reference internal" href="#eigrp-tables">EIGRP Tables</a></li>
+<li><a class="reference internal" href="#eigrp-neighbors-table">EIGRP Neighbors Table</a></li>
+<li><a class="reference internal" href="#eigrp-topology-table">EIGRP Topology Table</a><ul>
+<li><a class="reference internal" href="#full-routing-updates">full routing updates</a></li>
+<li><a class="reference internal" href="#partial-routing-updates">partial routing updates</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#eigrp-routing-table">Eigrp routing Table</a></li>
+<li><a class="reference internal" href="#metric-calculation-by-the-eigrp">Metric Calculation by the EIGRP</a><ul>
+<li><a class="reference internal" href="#eigrp-metric-calculaiton-formulae">EIGRP Metric Calculaiton formulae</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="introduction-to-networks.html"
+                        title="previous chapter">What is Computer Network</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="converged-networks.html"
+                        title="next chapter">Converged Networks</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/eigrp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="eigrp-enhanced-interiror-gateway-routing-protocol">
+<h1>EIGRP: Enhanced Interiror Gateway Routing Protocol<a class="headerlink" href="#eigrp-enhanced-interiror-gateway-routing-protocol" title="Permalink to this headline">¶</a></h1>
+<p>Eigrp is also called the advanced distance vector routing protocols, Cisco refers an  EIGRP as simply advanced distance
+vector routing protocols.
+Eigrp is the Cisco-proprietary routing protocols, but from 2013, Ciso defined the EIGRP as an open standard protocols.
+Open standard enables the EIGRP to run on other Vendors routers as well.</p>
+<div class="section" id="neighbors-discover">
+<h2>Neighbors Discover<a class="headerlink" href="#neighbors-discover" title="Permalink to this headline">¶</a></h2>
+<p>To Discover the EIGRP neighbors, EIGRP sends the hello message via multicast address <em>224.0.0.10</em> to its neighbors
+routers.
+<strong>HELLO</strong> message is sent by the EIGRP routers to discover the neighboring EIGRP routers and check the basic parameters
+to determine which router should be neighbor router. if those basic parameters cannot passed, the eigrp neighbors
+discovery get failed.we will discuss more about neighbors discovery in latter chapters.</p>
+</div>
+<div class="section" id="topology-exchange">
+<h2>Topology Exchange<a class="headerlink" href="#topology-exchange" title="Permalink to this headline">¶</a></h2>
+<p>After peering with the neighbour, the EIGRP router initially exchange the entire topology table with the neighbour
+routers, and then only partial updates as needed based on the changes to the network topology</p>
+</div>
+<div class="section" id="choosing-the-best-route">
+<h2>Choosing the Best route<a class="headerlink" href="#choosing-the-best-route" title="Permalink to this headline">¶</a></h2>
+<p>Each EIGRP router analyzed their topology table and choose the route having lowest metric to the destination networks /
+subnet</p>
+</div>
+<div class="section" id="eigrp-tables">
+<h2>EIGRP Tables<a class="headerlink" href="#eigrp-tables" title="Permalink to this headline">¶</a></h2>
+<p>Upon completing the above three step process <a href="#id1"><span class="problematic" id="id2">`Neighbour Discover`_</span></a>  <a class="reference internal" href="#topology-exchange">Topology Exchange</a> <a class="reference internal" href="#choosing-the-best-route">Choosing the Best route</a>  the
+Eigrp router maintains the three different types of  tables called.</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#eigrp-neighbors-table">EIGRP Neighbors Table</a></li>
+<li><a class="reference internal" href="#eigrp-topology-table">EIGRP Topology Table</a></li>
+<li><a class="reference internal" href="#eigrp-routing-table">EIGRP Routing Table</a></li>
+</ol>
+</div>
+<div class="section" id="eigrp-neighbors-table">
+<h2>EIGRP Neighbors Table<a class="headerlink" href="#eigrp-neighbors-table" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>It is simply another routers which is running the EIGRP routing algorithm, within the common subnet.</li>
+<li><strong>EIGRP HELLO</strong> messages, sent to multicast IP address 2240.0.10 to dynamically discover the potential neighbors.</li>
+<li>The routers must pass the some parameters before becoming the EIGRP neighbors.<ul>
+<li>It must pass the <em>Authentication</em> process</li>
+<li>It must use the same AS (Autonomous Number)</li>
+<li>The source IP address used by the neighbor Hello must be in the same subnet</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The router’s EIGRP K values must also match, this topic is beyond of CCNA 200-120 Version 2 course</p>
+</div>
+<ul class="simple">
+<li>After completing the EIGRP neighbors Verificaton method, <strong>EIGRP</strong> routers becomes the neighbors and they began to</li>
+<li>exchange their topology tables.</li>
+<li>we can simply issue the command show ip eigrp neighbors to view the EIGRP neighbors tables from global configuration mode.</li>
+</ul>
+</div>
+<div class="section" id="eigrp-topology-table">
+<h2>EIGRP Topology Table<a class="headerlink" href="#eigrp-topology-table" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>To Exchange the topology Table <strong>EIGRP</strong> use the <em>EIGRP update</em> message to its neighbors.</li>
+<li>Topology tables are exchanged using the <em>RTP</em> called as Reliable Transport Protocol</li>
+<li>Topology tables are updates using two methods
+* full routing updates
+* Partial routing updates</li>
+</ul>
+<div class="section" id="full-routing-updates">
+<h3><a class="reference internal" href="#full-routing-updates">full routing updates</a><a class="headerlink" href="#full-routing-updates" title="Permalink to this headline">¶</a></h3>
+<p>In full routing updates, the eigrp routers exchange the entire routing tables with its neighbors, Full routing update
+occours when the neighbors first come up.</p>
+</div>
+<div class="section" id="partial-routing-updates">
+<h3><a class="reference internal" href="#partial-routing-updates">partial routing updates</a><a class="headerlink" href="#partial-routing-updates" title="Permalink to this headline">¶</a></h3>
+<p>In Partial routing updates, the eigrp routers exchange only the recently changed routes.</p>
+<img alt="_images/Eigrp-full-and-partial-topology-exchange.png" src="_images/Eigrp-full-and-partial-topology-exchange.png" />
+</div>
+</div>
+<div class="section" id="eigrp-routing-table">
+<h2>Eigrp routing Table<a class="headerlink" href="#eigrp-routing-table" title="Permalink to this headline">¶</a></h2>
+<p>Every routing algorithm routing table stores the best route to the destination</p>
+</div>
+<div class="section" id="metric-calculation-by-the-eigrp">
+<h2>Metric Calculation by the EIGRP<a class="headerlink" href="#metric-calculation-by-the-eigrp" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Metric is the value used by the routing protocols to choose the best route.</li>
+<li>EIGRP use the Composite Metric to calculate the best path to its destination.</li>
+<li>EIGRP Composite Metric is the function of bandwidht and delay by default.</li>
+<li>Sometimes calculaton of metric is also depends upon the routers interface <strong>load</strong> and  <strong>reliability</strong></li>
+<li>Some books say, MTU is also used for the Metric calculation, but EIGRP use, bandwidth and delay as the default parameters to choose the best route to the destination.</li>
+</ul>
+<div class="section" id="eigrp-metric-calculaiton-formulae">
+<h3>EIGRP Metric Calculaiton formulae<a class="headerlink" href="#eigrp-metric-calculaiton-formulae" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<img alt="_images/eigrp-metric-calculation-formulae.png" class="last" src="_images/eigrp-metric-calculation-formulae.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="converged-networks.html" title="Converged Networks"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="introduction-to-networks.html" title="What is Computer Network"
+             >previous</a> |</li>
+        <li><a href="index.html">ccna 200-120 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ccnaopenpy'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    
+
+<div id="disqus_thread"></div>
+    <script>
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ccnaopenpy'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+Disqus.</a></noscript>
+
+    <div class="footer">
+        &copy; Copyright 2014, Manoj Gautam.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55398985-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  </body>
+</html>

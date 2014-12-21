@@ -1,0 +1,97 @@
+EIGRP: Enhanced Interiror Gateway Routing Protocol
+======================================================
+Eigrp is also called the advanced distance vector routing protocols, Cisco refers an  EIGRP as simply advanced distance
+vector routing protocols.
+Eigrp is the Cisco-proprietary routing protocols, but from 2013, Ciso defined the EIGRP as an open standard protocols.
+Open standard enables the EIGRP to run on other Vendors routers as well.
+
+Neighbors Discover
+----------------------
+To Discover the EIGRP neighbors, EIGRP sends the hello message via multicast address *224.0.0.10* to its neighbors
+routers.
+**HELLO** message is sent by the EIGRP routers to discover the neighboring EIGRP routers and check the basic parameters
+to determine which router should be neighbor router. if those basic parameters cannot passed, the eigrp neighbors
+discovery get failed.we will discuss more about neighbors discovery in latter chapters.
+
+Topology Exchange
+--------------------
+After peering with the neighbour, the EIGRP router initially exchange the entire topology table with the neighbour
+routers, and then only partial updates as needed based on the changes to the network topology
+
+
+Choosing the Best route
+---------------------------
+Each EIGRP router analyzed their topology table and choose the route having lowest metric to the destination networks /
+subnet
+
+EIGRP Tables
+---------------
+Upon completing the above three step process `Neighbour Discover`_  `Topology Exchange`_ `Choosing the Best route`_  the
+Eigrp router maintains the three different types of  tables called.
+
+#. `EIGRP Neighbors Table`_
+
+#. `EIGRP Topology Table`_
+
+#. `EIGRP Routing Table`_
+
+EIGRP Neighbors Table
+-----------------------
+* It is simply another routers which is running the EIGRP routing algorithm, within the common subnet. 
+
+* **EIGRP HELLO** messages, sent to multicast IP address 2240.0.10 to dynamically discover the potential neighbors. 
+
+* The routers must pass the some parameters before becoming the EIGRP neighbors.
+ 
+  * It must pass the *Authentication* process
+ 
+  * It must use the same AS (Autonomous Number)
+
+  * The source IP address used by the neighbor Hello must be in the same subnet
+
+.. note:: The router’s EIGRP K values must also match, this topic is beyond of CCNA 200-120 Version 2 course 
+
+* After completing the EIGRP neighbors Verificaton method, **EIGRP** routers becomes the neighbors and they began to
+* exchange their topology tables.
+* we can simply issue the command show ip eigrp neighbors to view the EIGRP neighbors tables from global configuration mode.   
+
+.. code:: R1(config)# show eigrp neighbors
+
+
+EIGRP Topology Table
+---------------------
+* To Exchange the topology Table **EIGRP** use the *EIGRP update* message to its neighbors.
+
+* Topology tables are exchanged using the *RTP* called as Reliable Transport Protocol
+
+* Topology tables are updates using two methods
+  * full routing updates
+  * Partial routing updates
+
+`full routing updates`_
+***********************
+In full routing updates, the eigrp routers exchange the entire routing tables with its neighbors, Full routing update
+occours when the neighbors first come up.
+
+`partial routing updates`_
+*******************************
+In Partial routing updates, the eigrp routers exchange only the recently changed routes.
+
+.. image:: _static/eigrp/Eigrp-full-and-partial-topology-exchange.png
+
+Eigrp routing Table
+---------------------
+Every routing algorithm routing table stores the best route to the destination
+
+
+Metric Calculation by the EIGRP
+-----------------------------------
+* Metric is the value used by the routing protocols to choose the best route.
+* EIGRP use the Composite Metric to calculate the best path to its destination.
+* EIGRP Composite Metric is the function of bandwidht and delay by default.
+* Sometimes calculaton of metric is also depends upon the routers interface **load** and  **reliability**
+* Some books say, MTU is also used for the Metric calculation, but EIGRP use, bandwidth and delay as the default parameters to choose the best route to the destination.
+ 
+EIGRP Metric Calculaiton formulae
+************************************
+.. note::  .. image:: _static/eigrp/eigrp-metric-calculation-formulae.png
