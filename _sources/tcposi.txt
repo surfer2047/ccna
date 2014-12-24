@@ -16,7 +16,7 @@ TCP/IP Application Layer
 **************************
 * Provides the User Interface
 * It defines the services that applications need
-* Defines whether the partner is reday or not to accept the data
+* Defines whether the partner is ready or not to accept the data
 * Define whether the Communication Medium is busy or not.
 
 Protocols runs at the Applications layers are
@@ -24,3 +24,35 @@ Protocols runs at the Applications layers are
 
 TCP/IP Transport Layer
 ****************************
+* Define the two protocols
+* TCP: Transmission Control Protocols
+* UDP: User Datagram Protocol
+* TCP is responisble for the Connection oriented Communication, while UDP is responsible for the Connection less Communication.
+* Transport layer Provides the services to the Application layer i.e. *n* layer provide services to *n+1* layer
+
+TCP/IP Network Layer
+***************************
+* It is responsible for addressing and routing of the packets
+* *IP* is the protocol defined as the Network Layer.
+* Network Layer is responsible for the *Internetwork Communication* *Packet Switching* and *Best route selectio* to the destination network.
+* TCP/IP protocols defines the Two version of IP
+  * IPv4: Majority in the world still use IPv4
+  * IPv6: In future will replace IPv4
+* IPv4 address are represented in **DDN** called *Dotted Decimal Notation* **example** *1.1.1.1*  
+* In network layer term **host** refers to any device, regardless of power and size, that has an IP address and connects to any TCP/IP network
+
+TCP/IP Network Access Layer
+******************************
+* This layer is also called *Link Layer* i.e. *Physical Layer* + *Data Link Layer*
+* The term **link** refers to the physical connections.
+* This layer defined the various protocols like,
+  * WAN Standards (*PPP*, *FrameRelay*, *Ethernet*, *ATM*) and many more.
+ 
+Data Encapsulation Process in TCP/IP Protocol Stack
+********************************************************
+.. image:: _static/module1/pdu.png
+
+* Segment: User data + Transport Layer Header
+* Packet:  Segment + IP Header
+* Frame: Packet + Data Link Layer Header
+* Physical layer define the data into bits, so that bits can be transmit from the transmission medium in the form of Voltage and currents.
