@@ -5,7 +5,7 @@ Operation of IP Data Networks
 ------------------------------------
 
 TCP/IP Networking Model
-**************************
+----------------------------
 * Networking Model is also called the networking architecure or sometimes networking **blueprint**
 * These Models use the set of Logical rules called **protocols** 
 * TCP/IP left hand side TCP/IP protocol stack is defined by *RFC 1122* documets
@@ -58,4 +58,44 @@ Data Encapsulation Process in TCP/IP Protocol Stack
 * Frame: Packet + Data Link Layer Header
 * Physical layer define the data into bits, so that bits can be transmit from the transmission medium in the form of Voltage and currents.
 
+OSI Model
+----------------------------
+* Open system Interconnection model, developed by ISO(International Organization for Standardization)
 
+* Have Seven Layers. and each layers defines a set of Unique Functions.
+
+.. image:: _static/module1/osi.png
+
+OSI Layer Description
+*************************
+
+Application Layer:
+*************************
+* Provides User Interface
+* Find the Communicating partner, whether it is busy or not.
+* Check whether the communication medium is busy or not.
+
+
+Presentation Layer
+***********************
+* Define Data formats like (*ASCII text EBCDIC text, binary BCD, JPEG*) 
+* Data Compression and decoding is funcition.
+
+Session Layer
+***************
+* Controls the Dialog between the Application
+* Define the Mode of Communication (*Full Duplex, HalfDuplex,and Simple*)
+
+Transport Layer
+*******************
+* Define the Process to Process Communication between the Devices.
+* Error Correction Methods are defined at this layer.
+
+Network Layer
+******************
+* Define Logical IP addressing.
+* Node to Node communication.
+* Packet Forwarding, best route Selection and internetwork Communication.
+* Protocols define at this Layer is IP.
+
+The easy way to remember OSI 7 layers is *EVERY PEOPLE SEEMS TO NEED DATA PROCESSING* 
