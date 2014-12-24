@@ -51,10 +51,11 @@ TCP/IP Network Access Layer
 Data Encapsulation Process in TCP/IP Protocol Stack
 ********************************************************
 
-
 .. image:: _static/module1/pdu.png
-
+     
 * Segment: User data + Transport Layer Header
 * Packet:  Segment + IP Header
 * Frame: Packet + Data Link Layer Header
 * Physical layer define the data into bits, so that bits can be transmit from the transmission medium in the form of Voltage and currents.
+
+
