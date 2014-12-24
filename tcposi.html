@@ -39,58 +39,6 @@
         <li><a href="index.html">ccna 200-120 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">The TCP/IP and OSI Networking Models</a><ul>
-<li><a class="reference internal" href="#operation-of-ip-data-networks">Operation of IP Data Networks</a></li>
-<li><a class="reference internal" href="#tcp-ip-networking-model">TCP/IP Networking Model</a><ul>
-<li><a class="reference internal" href="#tcp-ip-application-layer">TCP/IP Application Layer</a></li>
-<li><a class="reference internal" href="#tcp-ip-transport-layer">TCP/IP Transport Layer</a></li>
-<li><a class="reference internal" href="#tcp-ip-network-layer">TCP/IP Network Layer</a></li>
-<li><a class="reference internal" href="#tcp-ip-network-access-layer">TCP/IP Network Access Layer</a></li>
-<li><a class="reference internal" href="#data-encapsulation-process-in-tcp-ip-protocol-stack">Data Encapsulation Process in TCP/IP Protocol Stack</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#osi-model">OSI Model</a><ul>
-<li><a class="reference internal" href="#osi-layer-description">OSI Layer Description</a></li>
-<li><a class="reference internal" href="#application-layer">Application Layer:</a></li>
-<li><a class="reference internal" href="#presentation-layer">Presentation Layer</a></li>
-<li><a class="reference internal" href="#session-layer">Session Layer</a></li>
-<li><a class="reference internal" href="#transport-layer">Transport Layer</a></li>
-<li><a class="reference internal" href="#network-layer">Network Layer</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Welcome to ccna 200-120 Certification Guide</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/tcposi.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-
-    <div class="document">
 
 <script>
 
@@ -107,6 +55,135 @@
 </script>
 
 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="the-tcp-ip-and-osi-networking-models">
+<h1>The TCP/IP and OSI Networking Models<a class="headerlink" href="#the-tcp-ip-and-osi-networking-models" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="operation-of-ip-data-networks">
+<h2>Operation of IP Data Networks<a class="headerlink" href="#operation-of-ip-data-networks" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tcp-ip-networking-model">
+<h2>TCP/IP Networking Model<a class="headerlink" href="#tcp-ip-networking-model" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Networking Model is also called the networking architecure or sometimes networking <strong>blueprint</strong></li>
+<li>These Models use the set of Logical rules called <strong>protocols</strong></li>
+<li>TCP/IP left hand side TCP/IP protocol stack is defined by <em>RFC 1122</em> documets</li>
+</ul>
+<img alt="_images/tcpip.png" src="_images/tcpip.png" />
+<div class="section" id="tcp-ip-application-layer">
+<h3>TCP/IP Application Layer<a class="headerlink" href="#tcp-ip-application-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Provides the User Interface</li>
+<li>It defines the services that applications need</li>
+<li>Defines whether the partner is ready or not to accept the data</li>
+<li>Define whether the Communication Medium is busy or not.</li>
+</ul>
+<p>Protocols runs at the Applications layers are
+<strong>HTTP, DHCP, DNS, HTTPS, FTP, SMTP, TELNET, SSH</strong> and many more.</p>
+</div>
+<div class="section" id="tcp-ip-transport-layer">
+<h3>TCP/IP Transport Layer<a class="headerlink" href="#tcp-ip-transport-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Define the two protocols</li>
+<li>TCP: Transmission Control Protocols</li>
+<li>UDP: User Datagram Protocol</li>
+<li>TCP is responisble for the Connection oriented Communication, while UDP is responsible for the Connection less Communication.</li>
+<li>Transport layer Provides the services to the Application layer i.e. <em>n</em> layer provide services to <em>n+1</em> layer</li>
+</ul>
+</div>
+<div class="section" id="tcp-ip-network-layer">
+<h3>TCP/IP Network Layer<a class="headerlink" href="#tcp-ip-network-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>It is responsible for addressing and routing of the packets</li>
+<li><em>IP</em> is the protocol defined as the Network Layer.</li>
+<li>Network Layer is responsible for the <em>Internetwork Communication</em> <em>Packet Switching</em> and <em>Best route selectio</em> to the destination network.</li>
+<li>TCP/IP protocols defines the Two version of IP
+* IPv4: Majority in the world still use IPv4
+* IPv6: In future will replace IPv4</li>
+<li>IPv4 address are represented in <strong>DDN</strong> called <em>Dotted Decimal Notation</em> <strong>example</strong> <em>1.1.1.1</em></li>
+<li>In network layer term <strong>host</strong> refers to any device, regardless of power and size, that has an IP address and connects to any TCP/IP network</li>
+</ul>
+</div>
+<div class="section" id="tcp-ip-network-access-layer">
+<h3>TCP/IP Network Access Layer<a class="headerlink" href="#tcp-ip-network-access-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>This layer is also called <em>Link Layer</em> i.e. <em>Physical Layer</em> + <em>Data Link Layer</em></li>
+<li>The term <strong>link</strong> refers to the physical connections.</li>
+<li>This layer defined the various protocols like,
+* WAN Standards (<em>PPP</em>, <em>FrameRelay</em>, <em>Ethernet</em>, <em>ATM</em>) and many more.</li>
+</ul>
+</div>
+<div class="section" id="data-encapsulation-process-in-tcp-ip-protocol-stack">
+<h3>Data Encapsulation Process in TCP/IP Protocol Stack<a class="headerlink" href="#data-encapsulation-process-in-tcp-ip-protocol-stack" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/pdu.png" src="_images/pdu.png" />
+<ul class="simple">
+<li>Segment: User data + Transport Layer Header</li>
+<li>Packet:  Segment + IP Header</li>
+<li>Frame: Packet + Data Link Layer Header</li>
+<li>Physical layer define the data into bits, so that bits can be transmit from the transmission medium in the form of Voltage and currents.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="osi-model">
+<h2>OSI Model<a class="headerlink" href="#osi-model" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Open system Interconnection model, developed by ISO(International Organization for Standardization)</li>
+<li>Have Seven Layers. and each layers defines a set of Unique Functions.</li>
+</ul>
+<img alt="_images/osi.png" src="_images/osi.png" />
+<div class="section" id="osi-layer-description">
+<h3>OSI Layer Description<a class="headerlink" href="#osi-layer-description" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="application-layer">
+<h3>Application Layer:<a class="headerlink" href="#application-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Provides User Interface</li>
+<li>Find the Communicating partner, whether it is busy or not.</li>
+<li>Check whether the communication medium is busy or not.</li>
+</ul>
+</div>
+<div class="section" id="presentation-layer">
+<h3>Presentation Layer<a class="headerlink" href="#presentation-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Define Data formats like (<em>ASCII text EBCDIC text, binary BCD, JPEG</em>)</li>
+<li>Data Compression and decoding is funcition.</li>
+</ul>
+</div>
+<div class="section" id="session-layer">
+<h3>Session Layer<a class="headerlink" href="#session-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Controls the Dialog between the Application</li>
+<li>Define the Mode of Communication (<em>Full Duplex, HalfDuplex,and Simple</em>)</li>
+</ul>
+</div>
+<div class="section" id="transport-layer">
+<h3>Transport Layer<a class="headerlink" href="#transport-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Define the Process to Process Communication between the Devices.</li>
+<li>Error Correction Methods are defined at this layer.</li>
+</ul>
+</div>
+<div class="section" id="network-layer">
+<h3>Network Layer<a class="headerlink" href="#network-layer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Define Logical IP addressing.</li>
+<li>Node to Node communication.</li>
+<li>Packet Forwarding, best route Selection and internetwork Communication.</li>
+<li>Protocols define at this Layer is IP.</li>
+</ul>
+<p>The easy way to remember OSI 7 layers is <em>EVERY PEOPLE SEEMS TO NEED DATA PROCESSING</em></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
