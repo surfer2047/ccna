@@ -8,5 +8,19 @@ TCP/IP Networking Model
 **************************
 * Networking Model is also called the networking architecure or sometimes networking **blueprint**
 * These Models use the set of Logical rules called **protocols** 
+* TCP/IP left hand side TCP/IP protocol stack is defined by *RFC 1122* documets
 
 .. image:: _static/module1/tcpip.png
+
+TCP/IP Application Layer
+**************************
+* Provides the User Interface
+* It defines the services that applications need
+* Defines whether the partner is reday or not to accept the data
+* Define whether the Communication Medium is busy or not.
+
+Protocols runs at the Applications layers are
+**HTTP, DHCP, DNS, HTTPS, FTP, SMTP, TELNET, SSH** and many more.
+
+TCP/IP Transport Layer
+****************************
