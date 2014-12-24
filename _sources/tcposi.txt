@@ -3,3 +3,10 @@ The TCP/IP and OSI Networking Models
 
 Operation of IP Data Networks
 ------------------------------------
+
+TCP/IP Networking Model
+**************************
+* Networking Model is also called the networking architecure or sometimes networking **blueprint**
+* These Models use the set of Logical rules called **protocols** 
+
+.. image:: _static/module1/tcpip.png

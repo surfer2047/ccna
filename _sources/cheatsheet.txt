@@ -1,0 +1,5 @@
+Enterprise Network: The Information Technology (IT) world refers to a network
+created by one corporation, or enterprise, for the purpose of allowing its employees to communicate,
+as an enterprise network
+
+SOHO: Small Office Home Office, used for smaller home networks and for small business purpose
