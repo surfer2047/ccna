@@ -12,9 +12,7 @@ topics include all the areas covered under the 200-120 CCNA exam.
 .. toctree::
    :maxdepth: 1
    
-   introduction-to-networks.rst
-   eigrp.rst
-   converged-networks.rst
+   tcposi.rst
 
 Indices and tables
 ==================
